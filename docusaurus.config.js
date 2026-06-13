@@ -7,7 +7,7 @@ const config = {
   tagline: 'Wild Linux Kernel Object Module',
   favicon: 'img/favicon.ico',
 
-  url: 'https://robii06.github.io',
+  url: 'https://deepsys-wlkom-doc.github.io',
   baseUrl: '/',
 
   organizationName: 'robii06',
