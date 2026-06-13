@@ -25,11 +25,9 @@ function HomepageHeader() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            fontFamily: 'var(--font-code)',
-            fontSize: '48px',
-            color: 'var(--accent)'
+            overflow: 'hidden'
           }}>
-            WLKOM
+            <img src="/img/logo.jpg" alt="WLKOM Logo" style={{width: '70%', height: 'auto'}} />
           </div>
         </div>
         <Heading as="h1" style={{fontFamily: 'var(--font-title)', fontSize: '4rem', letterSpacing: '4px', textTransform: 'uppercase', color: '#fff'}}>
