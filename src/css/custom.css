@@ -1,0 +1,83 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #00c8ff;
+  --ifm-color-primary-dark: #00b4e6;
+  --ifm-color-primary-darker: #00aadd;
+  --ifm-color-primary-darkest: #008cb6;
+  --ifm-color-primary-light: #19ceff;
+  --ifm-color-primary-lighter: #26d1ff;
+  --ifm-color-primary-lightest: #4cdbff;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  
+  --bg: #080c10;
+  --bg2: #0d1117;
+  --bg3: #111820;
+  --panel: #0a1018;
+  --border: #1a2a3a;
+  --border2: #1e3a52;
+  --accent: #00c8ff;
+  --accent2: #00ff9d;
+  --accent3: #ff6b35;
+  --accent4: #7b61ff;
+  --text: #c8d8e8;
+  --text2: #7a9ab8;
+  --text3: #4a6a82;
+  --red: #ff4444;
+  --yellow: #ffd700;
+  --green: #00ff9d;
+}
+
+[data-theme='dark'] {
+  --ifm-background-color: var(--bg);
+  --ifm-background-surface-color: var(--bg2);
+  --ifm-font-color-base: var(--text);
+  --ifm-heading-color: #fff;
+  --ifm-menu-color: var(--text2);
+  --ifm-navbar-background-color: var(--bg2);
+  --ifm-footer-background-color: var(--bg);
+  --ifm-color-primary: var(--accent);
+}
+
+body {
+  font-family: 'IBM Plex Mono', monospace, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Rajdhani', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Scanline overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.03) 2px,
+    rgba(0,0,0,0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 1000;
+}
+
+code {
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--accent3);
+  background: rgba(255,107,53,0.08);
+  border: 1px solid rgba(255,107,53,0.2);
+}
+
+.markdown>pre {
+  background: #000;
+  border: 1px solid var(--border2);
+}
