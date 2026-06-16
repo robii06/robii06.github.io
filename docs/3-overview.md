@@ -1,7 +1,7 @@
 ---
 id: overview
 title: Vue d'ensemble
-sidebar_position: 1
+sidebar_position: 3
 ---
 
 # Présentation du projet
@@ -16,27 +16,13 @@ Le module combine trois capacités principales : établissement d'un **reverse s
 
 ## Fonctionnalités implémentées
 
-- Reverse shell PTY interactif entièrement en C (Kernel PTY Bridge)
-- Authentification par mot de passe sécurisé (hash SHA256)
-- Reconnexion automatique toutes les 5 secondes
-- Dissimulation des fichiers (hook getdents64)
-- Dissimulation de lsmod / /proc/modules
-- Masquage du processus (nom kworker/u2:0h)
-- Résistance au déchargement (try_module_get)
-- Persistance automatique via service systemd (dès le chargement)
-- Déploiement Ansible 2 VMs automatisé
-
-## Stack technique
-
-- **Noyau** C — Linux Kernel API
-- **Hook** ftrace + kprobes
-- **Shell** Kernel PTY Bridge (C kthreads)
-- **Sécurité** Crypto API du noyau (SHA256)
-- **Attaquant** C — poll() + raw terminal
-- **Infra** Ansible + QEMU/KVM
-- **OS cible** Debian 12 Bookworm
-- **Noyau min.** Linux 5.7+
-- **Réseau** TCP port 4444
+- **Connexion & Shell** : Reverse shell PTY interactif entièrement en C (Kernel PTY Bridge).
+- **Authentification** : Par mot de passe sécurisé (hash SHA256 côté noyau).
+- **Résilience** : Reconnexion automatique toutes les 5 secondes en cas de coupure.
+- **Furtivité FS** : Dissimulation des fichiers et répertoires (hook getdents64).
+- **Furtivité Module** : Dissimulation de lsmod / /proc/modules (list_del).
+- **Masquage Processus** : Nom de thread usurpé (`kworker/u2:0h`).
+- **Persistance** : Installation automatique d'un service systemd au chargement.
 
 ## Flux d'attaque général
 

@@ -1,10 +1,10 @@
 ---
 id: usage
 title: Utilisation
-sidebar_position: 8
+sidebar_position: 1
 ---
 
-# Guide d'Utilisation
+# Guide d'Utilisation Rapide
 
 :::info Prérequis
 Arch Linux sur l'hôte physique, CPU avec virtualisation activée (VT-x/AMD-V), Ansible installé (`sudo pacman -S ansible`), minimum 8 Go de RAM libre et 50 Go de disque.
